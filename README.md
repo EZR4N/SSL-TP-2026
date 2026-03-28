@@ -1,4 +1,4 @@
-# SSL 2026 - Trabajo Práctico y Ejercicios
+# SSL 2026 
 
 Repositorio para la cursada de Sintaxis y Semántica de los Lenguajes.
 
