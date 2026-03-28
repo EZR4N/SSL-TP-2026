@@ -14,6 +14,7 @@ Somos un equipo grande. Para no pisarnos el código:
 - Francesco Nehuén Argenio
 - Fermin Sorzzoni
 - Samuel Fuentes Collante
+- Celeste Melody Cóndori Espejo
 - Tomas Lucas
 - Martin Nahuel Romero
 - Tomas Hermida
