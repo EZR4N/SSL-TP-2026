@@ -24,7 +24,7 @@ mayorlongitud.o: mayorlongitud.c String.h
 todosiguales.o: todosiguales.c String.h
 suma.o: suma.c String.h Conversion.h
 
-String.o: String.c String.h
+Strings.o: Strings.c Strings.h
 Conversion.o: Conversion.c Conversion.h
 
 test.o: test.c StringTest.h ConversionTest.h
