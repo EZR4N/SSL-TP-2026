@@ -53,15 +53,14 @@ char* Concatenate(const char *stringArray[], const int arrayLength) {
 char* Power(const char *string, const int power) {
     const int stringLength = GetLength(string);
 
-    char *poweredString = malloc(((stringLength * power) + 1) * sizeof(char));
+    const int totalLength = stringLength * power;
+
+    char *poweredString = malloc((totalLength + 1) * sizeof(char));
 
     int currentLength = 0;
 
-    for(int i = 0; i < power; i++) {
-        for(int j = 0; j < stringLength; j++) {
-            poweredString[currentLength] = string[j];
-            currentLength++;
-        }
+    for(int i = 0; i < totalLength; i++) {
+        poweredString[i] = string[i % stringLength];
     }
 
     poweredString[currentLength] = '\0';
