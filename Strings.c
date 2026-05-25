@@ -1,25 +1,49 @@
 #include "Strings.h"
 #define TRUE 1
 #define FALSE 0
+#define START_OF_ASCII_DECIMAL_DIGITS 48
+
+int isADecimalDigit(const char ch) {
+    return ch >= START_OF_ASCII_DECIMAL_DIGITS && ch < START_OF_ASCII_DECIMAL_DIGITS + 10;
+}
 
 int IsEmpty(const char *str) {
-
+    return !GetLength(str);
 }
 
 int GetLength(const char *str) {
+    int length = 0;
+    while(str[length] != '\0')
+        length++;
 
+    return length;
 }
 
 int AreEqual(const char *str1, const char *str2) {
+    const int firstStringLength = GetLength(str1);
+    if(firstStringLength != GetLength(str2)) return FALSE;
 
+    for(int i = 0; i < firstStringLength; i++)
+     if(str1[i] != str2[i])
+        return FALSE;
+    
+    return TRUE;
 }
 
 int AreDecimalDigits(const char *str) {
+    for(int i = 0; str[i] != '\0'; i++) 
+        if(!isADecimalDigit(str[i]))
+            return FALSE;
 
+    return TRUE;
 }
 
 int Contains(const char *str, const char ch) {
-
+    for(int i = 0; str[i] != '\0'; i++) 
+        if(str[i] == ch)
+            return TRUE;
+    
+    return FALSE;
 }
 
 // OPERACION A DEFINIR
