@@ -9,14 +9,16 @@ int AreEqual(const char *str1, const char *str2);
 
 int AreDecimalDigits(const char *str);
 
-int Contains(const char *str);
+int Contains(const char *str, const char ch);
 
 // OPERACION A DEFINIR
 
-char* Concatenate(const char *str1, const char *str2);
+char* Concatenate(const char *stringArray[], const int arrayLength);
 
-char* Power(const char *str, const int times);
+char* Power(const char *string, const int power);
 
-// OPERACION A DEFINIR
+// OPERACION EXTRA
+
+char* Reverse(const char *string);
 
 #endif
