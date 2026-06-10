@@ -10,7 +10,7 @@ C: No, las bibliotecas de strings de C no incluyen al tipo, solo definen funcion
 TypeScript: No, "string" es un tipo primitivo, no viene de una biblioteca, pero en la biblioteca de tipos define las interfaces y métodos asociados al tipo "string".
 
 3. ¿Qué alfabeto usa?
-C: Todo lo que el compiladores procesa tiene que estar definido sobre ASCII.
+C: Todo lo que el compilador procesa debe/tiene que estar definido sobre ASCII.
 TypeScript: El compilador soporta todos los carácteres Unicode (esto incluye acentos o carácteres de otros alfabetos).
 
 4. ¿Cómo se resuelve la alocación de memoria?
@@ -27,7 +27,7 @@ TypeScript: Si, los strings soportan todas las operaciones disponibles para todo
 
 7. ¿Cuál es la mecánica para ese tipo cuando se los pasa como argumentos?
 C: Como son arrays de "char", lo que se pasa es un puntero, o sea una referencia.
-TypeScript: Los "string" son primtiivos, asi que se copia el valor, no se pasan por referencia.
+TypeScript: Los "string" son primitivos e inmutables, asi que se copia el valor, no se pasan por referencia.
 
 8. ¿Y cuando son retornados por una función?
 C: Se retorna un puntero "char*". Si se utiliza la notación con [] para declararlo y se devuelve, cuando la función se termina sale del scope, entonces esa memoria no es válida y por lo tanto es undefined behavior.
