@@ -12,11 +12,11 @@ int IsEmpty(const char *str) {
 }
 
 int GetLength(const char *str) {
-    int length = 0;
-    while(str[length] != '\0')
-        length++;
+    if(*str == '\0')
+        return 0;
 
-    return length;
+    // avanza 1 el puntero
+    return 1 + GetLength(str + 1);
 }
 
 int AreEqual(const char *str1, const char *str2) {
