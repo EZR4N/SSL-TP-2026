@@ -11,9 +11,9 @@ Somos un equipo grande. Para no pisarnos el código:
 
 ## 👥 Equipo
 - Ezequiel Orellana
-- Francesco Nehuén Argenio
+- Tomas Ezequiel Perez
 - Fermin Sorzzoni
-- Samuel Fuentes Collante
+- Sebastian Faingerch
 - Celeste Melody Cóndori Espejo
 - Tomas Lucas
 - Martin Nahuel Romero
