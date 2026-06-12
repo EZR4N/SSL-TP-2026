@@ -1,4 +1,5 @@
 #include "Strings.h"
+#include <stdlib.h>
 #define TRUE 1
 #define FALSE 0
 #define START_OF_ASCII_DECIMAL_DIGITS 48
@@ -12,11 +13,11 @@ int IsEmpty(const char *str) {
 }
 
 int GetLength(const char *str) {
-    int length = 0;
-    while(str[length] != '\0')
-        length++;
+    if(*str == '\0')
+        return 0;
 
-    return length;
+    // avanza 1 el puntero
+    return 1 + GetLength(str + 1);
 }
 
 int AreEqual(const char *str1, const char *str2) {
@@ -81,13 +82,11 @@ char* Power(const char *string, const int power) {
 
     char *poweredString = malloc((totalLength + 1) * sizeof(char));
 
-    int currentLength = 0;
-
     for(int i = 0; i < totalLength; i++) {
         poweredString[i] = string[i % stringLength];
     }
 
-    poweredString[currentLength] = '\0';
+    poweredString[totalLength] = '\0';
 
     return poweredString;
 }
