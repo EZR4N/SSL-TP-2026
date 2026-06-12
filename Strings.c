@@ -1,4 +1,5 @@
 #include "Strings.h"
+#include <stdlib.h>
 #define TRUE 1
 #define FALSE 0
 #define START_OF_ASCII_DECIMAL_DIGITS 48
@@ -81,13 +82,11 @@ char* Power(const char *string, const int power) {
 
     char *poweredString = malloc((totalLength + 1) * sizeof(char));
 
-    int currentLength = 0;
-
     for(int i = 0; i < totalLength; i++) {
         poweredString[i] = string[i % stringLength];
     }
 
-    poweredString[currentLength] = '\0';
+    poweredString[totalLength] = '\0';
 
     return poweredString;
 }
