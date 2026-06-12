@@ -1,14 +1,13 @@
 #include "Strings.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char **argv) {
     const char* longestString = NULL;
     int longestStringLength = 0;
 
-    for(int i = 1; i < argc; i++) {
-        const char* string = argv[i];
-        const int length = GetLength(string);
+    for(char **p = argv + 1; *p != NULL; p++) {
+        const int length = GetLength(*p);
         if(length > longestStringLength) {
-            longestString = string;
+            longestString = *p;
             longestStringLength = length;
         }
     }
